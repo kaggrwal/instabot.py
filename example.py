@@ -10,7 +10,7 @@ from src.follow_protocol import follow_protocol
 from src.unfollow_protocol import unfollow_protocol
 
 bot = InstaBot(
-    login="9467694091",
+    login="secluded_nomad",
     password="dob2919",
     like_per_day=500,
     comments_per_day=0,

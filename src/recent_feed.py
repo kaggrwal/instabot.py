@@ -11,12 +11,13 @@ def get_media_id_recent_feed(self):
         log_string = "%s : Get media id on recent feed \n %s" % (
             self.user_login, now_time.strftime("%d.%m.%Y %H:%M"))
         self.write_log(log_string)
-        url = 'https://www.instagram.com/?__a=1'
+        #url = 'https://www.instagram.com/?__a=1'
+        url = 'https://www.instagram.com/graphql/query/?query_hash=13ab8e6f3d19ee05e336ea3bd37ef12b&variables={}'
         try:
             r = self.s.get(url)
             all_data = json.loads(r.text)
 
-            self.media_on_feed = list(all_data['graphql']['user']['edge_web_feed_timeline']['edges'])
+            self.media_on_feed = list(all_data['data']['user']['edge_web_feed_timeline']['edges'])
             log_string = "Media in recent feed = %i" % (
                 len(self.media_on_feed))
             self.write_log(log_string)

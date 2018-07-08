@@ -304,7 +304,7 @@ class InstaBot:
             self.write_log(authentication_log)
             if authenticated is True:
                 ui = UserInfo()
-		self.user_login = authenticated_username
+                self.user_login = authenticated_username
                 self.user_id = ui.get_user_id_by_login(self.user_login)
                 self.login_status = True
                 log_string = '%s login success!' % (self.user_login)

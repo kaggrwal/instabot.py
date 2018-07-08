@@ -706,7 +706,7 @@ class InstaBot:
                 # ------------------- Follow -------------------
                 self.new_auto_mod_follow()
                 # ------------------- Unfollow -------------------
-                self.new_auto_mod_unfollow() 
+                #self.new_auto_mod_unfollow() //modified till whitelist not ready
                 # ------------------- Comment -------------------
                 self.new_auto_mod_comments()
                 # Bot iteration in 1 sec
@@ -983,5 +983,3 @@ class InstaBot:
                 self.logger.info(log_text)
             except UnicodeEncodeError:
                 print("Your text has unicode problem!")
-
-			

@@ -16,8 +16,8 @@ def likers_protocol(self):
         self.write_log(log_string)
 
         if self.media_by_user[self.
-                              current_index]["likes"]["count"] >= 10 and self.media_by_user[self.
-                                                                                            current_index]["likes"]["count"] < 100:
+                              current_index]["edge_media_preview_like"]["count"] >= 10 and self.media_by_user[self.
+                                                                                            current_index]["edge_media_preview_like"]["count"] < 100:
             get_user_id_post_page(
                 self, self.media_by_user[self.current_index]["code"])
             username_checker(self)

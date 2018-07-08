@@ -295,13 +295,13 @@ class InstaBot:
 
         if login.status_code == 200:
             r = self.s.get('https://www.instagram.com/')
-	    json_response = json.loads(login.content)
-	    authenticated = json_response['authenticated']
-	    username_start_index = r.text.find("username")+11
-	    username_end_index = r.text.find('"',username_start_index)
-	    authenticated_username =  r.text[username_start_index:username_end_index]
-	    authentication_log = '%s authenticated with username: %s' %(self.user_login,authenticated_username)
-	    self.write_log(authentication_log)
+            json_response = json.loads(login.content)
+            authenticated = json_response['authenticated']
+            username_start_index = r.text.find("username")+11
+            username_end_index = r.text.find('"',username_start_index)
+            authenticated_username =  r.text[username_start_index:username_end_index]
+            authentication_log = '%s authenticated with username: %s' %(self.user_login,authenticated_username)
+            self.write_log(authentication_log)
             if authenticated is True:
                 ui = UserInfo()
 		self.user_login = authenticated_username

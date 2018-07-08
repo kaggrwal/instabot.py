@@ -14,7 +14,7 @@ bot = InstaBot(
     password="dob2919",
     like_per_day=500,
     comments_per_day=0,
-    tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia',travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram'],
+    tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia','travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram'],
     tag_blacklist=['porn', 'sex','hotgirl','instaporn','deals','sexy'],
     user_blacklist={},
     max_like_for_one_tag=25,
@@ -23,7 +23,7 @@ bot = InstaBot(
     unfollow_per_day=20,
     unfollow_break_min=15,
     unfollow_break_max=30,
-    log_mod=1,
+    log_mod=0,
     proxy='',
     # List of list of words, each of which will be used to generate comment
     # For example: "This shot feels wow!"

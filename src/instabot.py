@@ -362,7 +362,7 @@ class InstaBot:
                 url_tag = self.url_tag % (tag)
                 try:
                     r = self.s.get(url_tag)
-		    self.write_log(url_tag)
+                    self.write_log(url_tag)
                     all_data = json.loads(r.text)
                     self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
 		    media_tag = "media_tag_list: %s" % str(self.media_by_tag)

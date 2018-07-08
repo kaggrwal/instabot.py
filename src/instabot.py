@@ -365,7 +365,7 @@ class InstaBot:
                     self.write_log(url_tag)
                     all_data = json.loads(r.text)
                     self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
-		    media_tag = "media_tag_list: %s" % str(self.media_by_tag)
+                    media_tag = "media_tag_list: %s" % str(self.media_by_tag)
                 except:
                     self.media_by_tag = []
                     self.write_log("Except on get_media!")

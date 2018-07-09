@@ -11,8 +11,9 @@ from .user_feed_protocol import user_feed_protocol
 
 
 def unfollow_protocol(self):
-    limit = random.randint(10, 22) + 1
-    while self.unfollow_counter <= limit:
+    #limit = random.randint(10, 22) + 1
+    if time.time() > self.next_iteration["Unfollow"] and self.unfollow_counter <= self.unfollow_per_day:
+    #while self.unfollow_counter <= limit:
         get_media_id_recent_feed(self)
         if len(self.media_on_feed) == 0:
             self.follow_counter = 0

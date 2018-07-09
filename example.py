@@ -14,13 +14,13 @@ bot = InstaBot(
     password="dob2919",
     like_per_day=500,
     comments_per_day=0,
-    tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia','travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram'],
-    tag_blacklist=['porn', 'sex','hotgirl','instaporn','deals','sexy'],
+    tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia','travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram','writersofindia','quoteoftheday'],
+    tag_blacklist=['porn', 'sex','hotgirl','instaporn','deals','sexy','likeforlike','followforfollow','hot'],
     user_blacklist={},
-    max_like_for_one_tag=25,
-    follow_per_day=2,
+    max_like_for_one_tag=15,
+    follow_per_day=50,
     follow_time=1 * 60 * 30,
-    unfollow_per_day=20,
+    unfollow_per_day=40,
     unfollow_break_min=60*30,
     unfollow_break_max=60*60,
     log_mod=0,
@@ -41,15 +41,14 @@ bot = InstaBot(
     ## Will do partial matches; i.e. 'mozart' will block 'legend_mozart'
     ### 'free_followers' will be blocked because it contains 'free'
     unwanted_username_list=[
-        'second', 'stuff', 'art', 'project', 'love', 'life', 'food', 'blog',
-        'free', 'keren', 'photo', 'graphy', 'indo', 'travel', 'art', 'shop',
+        'second', 'stuff', 'art', 'project', 'love', 'food', 'blog', 'keren', 'shop',
         'store', 'sex', 'toko', 'jual', 'online', 'murah', 'jam', 'kaos',
         'case', 'baju', 'fashion', 'corp', 'tas', 'butik', 'grosir', 'karpet',
         'sosis', 'salon', 'skin', 'care', 'cloth', 'tech', 'rental', 'kamera',
         'beauty', 'express', 'kredit', 'collection', 'impor', 'preloved',
         'follow', 'follower', 'gain', '.id', '_id', 'bags'
     ],
-    unfollow_whitelist=['9gag', 'shots_of_india','unheard_shayri','villainquote','nteetie','photowalkdelhi','ghietauelena','loeshoekstra','thegameoflaughs','people_who_rise','apextvofficial','stereoindia','sakshimalik','dlf_cyberhub','meenakshichaudhary006','anunaysood','thescientistfacts','h4pp1e','clone_collection','latest_one.in','technicalbaba_','mishti.and.meat','corporate.bytes','pruvichowdary','trendfilms','ixigo','artistsadda','oneplus','thelocaltrain','kailash.kumar11','famehazel','ankita_narayan_','sassy_thoughts','__funny__chats__','6amsuccess','adventure_nation_outdoor_tribe','kriti.kharbanda','akaushal2945','time4knowledge','divinebucketlist','iamtarunjit','markvelasquez101','thinkandcode','codechef','usabilla','ode_to_travel','shootguru','wandering_dreamcatcher','workoutsofficial','monkey__shanti','mrwhosetheboss','lalitshokeen1515','horrorphiles','fairwarningcareers','vision_of_india','asabhyak','sumeetvyas','instagram','selenagomez','natgeo','kajalaggarwaloffical','akshita.chhabra','deepikapadukone','aliaabhatt','priyankachopra','sunnnyleone','ileana_official','jacquelinef143','naruto','nina','chan.singh7','evelyn_sharma','sarcasm_only','thegoodquote','barked','pu_chd','prachidesai','heenasihag','theawkwardyeti','chandigarhians__','factbolt','asapscience','tvfqtiyapa','allindiabakchod','narendramodi','navagg79','historytv18','the.realshit.gyan','namelsspc','akshaykumar','streets.of.india','500px','humansofchandigarh','the.ramukaka','virat.kohli','photgraphers_of_india','delhigram','stories.of.india','indianshutterbugs','indiatravelgram','jitendrak1','rajography','spacex','colours.of.india','nikonindiaofficial','yourstory_co','desi_diaries','simrankaur9492','troll_punjabi','sciencejoke.s','chemistryjokes','curiositydotcom','futurism','ethereal.colours','hiswriteups','longexpo_shotz','developerjobs4you','monikaspeaks','geekspin','wevolverapp','elonmusk','scrawledstories','thescribbledstories','ttt_official','scoopwhoop','thewashroomstories','amandacerny','ishivyas18','garbagebinofficial','bosplanet','natalie.dormer','emilia_clarke','roycebairphoto','singh_nikita','dslrofficial','theunrulytravler','streetphotographyindia','indian.photography','india.clicks','yourshot_india','indiapictures','igersofindia','photographers_hub_india'])
+    unfollow_whitelist=['9gag', 'shots_of_india','unheard_shayri','villainquote','nteetie','photowalkdelhi','ghietauelena','loeshoekstra','thegameoflaughs','people_who_rise','apextvofficial','stereoindia','sakshimalik','dlf_cyberhub','meenakshichaudhary006','anunaysood','thescientistfacts','h4pp1e','clone_collection','latest_one.in','dslr_hub_','technicalbaba_','mishti.and.meat','corporate.bytes','pruvichowdary','trendfilms','ixigo','artistsadda','oneplus','thelocaltrain','kailash.kumar11','famehazel','ankita_narayan_','sassy_thoughts','__funny__chats__','6amsuccess','adventure_nation_outdoor_tribe','kriti.kharbanda','akaushal2945','time4knowledge','divinebucketlist','iamtarunjit','markvelasquez101','thinkandcode','codechef','usabilla','ode_to_travel','shootguru','wandering_dreamcatcher','workoutsofficial','monkey__shanti','mrwhosetheboss','lalitshokeen1515','horrorphiles','fairwarningcareers','vision_of_india','asabhyak','sumeetvyas','instagram','selenagomez','natgeo','kajalaggarwaloffical','akshita.chhabra','deepikapadukone','aliaabhatt','priyankachopra','sunnnyleone','ileana_official','jacquelinef143','naruto','nina','chan.singh7','evelyn_sharma','sarcasm_only','thegoodquote','barked','pu_chd','prachidesai','heenasihag','theawkwardyeti','chandigarhians__','factbolt','asapscience','tvfqtiyapa','allindiabakchod','narendramodi','navagg79','historytv18','the.realshit.gyan','namelsspc','akshaykumar','streets.of.india','500px','humansofchandigarh','the.ramukaka','virat.kohli','photgraphers_of_india','delhigram','stories.of.india','indianshutterbugs','indiatravelgram','jitendrak1','rajography','spacex','colours.of.india','nikonindiaofficial','yourstory_co','desi_diaries','simrankaur9492','troll_punjabi','sciencejoke.s','chemistryjokes','curiositydotcom','futurism','ethereal.colours','hiswriteups','longexpo_shotz','developerjobs4you','monikaspeaks','geekspin','wevolverapp','elonmusk','scrawledstories','thescribbledstories','ttt_official','scoopwhoop','thewashroomstories','amandacerny','ishivyas18','garbagebinofficial','bosplanet','natalie.dormer','emilia_clarke','roycebairphoto','singh_nikita','dslrofficial','theunrulytravler','streetphotographyindia','indian.photography','india.clicks','yourshot_india','indiapictures','igersofindia','photographers_hub_india'])
 while True:
 
     #print("# MODE 0 = ORIGINAL MODE BY LEVPASHA")

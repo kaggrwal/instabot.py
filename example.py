@@ -11,7 +11,7 @@ from src.unfollow_protocol import unfollow_protocol
 
 bot = InstaBot(
     login="secluded_nomad",
-    password="Kagg2919@",
+    password="dob2919@",
     like_per_day=500,
     comments_per_day=0,
     tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia','travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram','writersofindia','quoteoftheday'],

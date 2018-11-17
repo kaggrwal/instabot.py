@@ -39,8 +39,11 @@ class UserInfo:
     def get_user_id_by_login(self, user_name):
         url_info = self.url_user_info % (user_name)
         info = self.s.get(url_info)
-        json_info = json.loads(re.search('{"activity.+probably_has_app', info.text, re.DOTALL).group(0)+'":""}')
-        id_user = json_info['entry_data']['ProfilePage'][0]['graphql']['user']['id']
+        search = re.search('(\"graphql\".+is_business_account)', info.text, re.DOTALL)
+        json_info = json.loads('{' + search.group(0) + '":false }}}')
+        id_user = json_info['graphql']['user']['id']
+        #json_info = json.loads(re.search('{"activity.+probably_has_app', info.text, re.DOTALL).group(0)+'":""}')
+        #id_user = json_info['entry_data']['ProfilePage'][0]['graphql']['user']['id']
         return id_user
 
     def search_user(self, user_id=None, user_name=None):

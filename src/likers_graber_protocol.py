@@ -22,7 +22,7 @@ def likers_graber_protocol(self):
         # ------------------- Like -------------------
         if self.is_rejected is not False:
             self.is_checked = False
-            new_auto_mod_unfollow2(self)
+            #new_auto_mod_unfollow2(self)
             return 0
         likers_protocol(self)
         time.sleep(random.randint(13, 35))

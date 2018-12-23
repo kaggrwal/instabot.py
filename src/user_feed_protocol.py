@@ -26,6 +26,6 @@ def user_feed_protocol(self):
             self.is_follower_number += 1
             time.sleep(5)
             return
-        new_auto_mod_like2(self)
+        #new_auto_mod_like2(self)
         counterz += 1
-        time.sleep(3 * 15)
+        #time.sleep(3 * 15)

@@ -51,9 +51,9 @@ def feed_scanner(self):
                         ' is already in ex user list... \n=============================='
                     )
                     break
-            else:
-                likers_graber_protocol(self)
-                self.ex_user_list.append([self.current_user, self.current_id])
+        else:
+            likers_graber_protocol(self)
+            self.ex_user_list.append([self.current_user, self.current_id])
             self.user_list = []
             self.media_by_user = []
             self.media_on_feed = []
@@ -63,6 +63,6 @@ def feed_scanner(self):
             self.current_user = self.ex_user_list[chooser][0]
             self.current_id = self.ex_user_list[chooser][1]
             print('Trying to unfollow : ' + self.current_user)
-            new_auto_mod_unfollow2(self)
+            #new_auto_mod_unfollow2(self)
             del self.ex_user_list[chooser]
         time.sleep(random.randint(15, 22))

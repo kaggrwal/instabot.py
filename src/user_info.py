@@ -9,8 +9,8 @@ import time
 def get_user_info(self, username):
     if self.login_status:
         now_time = datetime.datetime.now()
-        log_string = "%s : Get user info \n%s" % (
-            self.user_login, now_time.strftime("%d.%m.%Y %H:%M"))
+        log_string = "%s : Get user info \n%s...%s" % (
+            self.user_login, now_time.strftime("%d.%m.%Y %H:%M"),username)
         self.write_log(log_string)
         if self.login_status == 1:
             url = 'https://www.instagram.com/%s/?__a=1' % (username)
@@ -19,7 +19,7 @@ def get_user_info(self, username):
 
                 user_info = json.loads(r.text)
 
-                log_string = "Checking user info.."
+                log_string = "Checking user info..%s"%(username)
                 self.write_log(log_string)
 
                 follows = user_info['graphql']['user']['edge_follow']['count']

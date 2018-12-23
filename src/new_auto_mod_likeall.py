@@ -1,7 +1,7 @@
 def new_like_all_exist_media(self):
     i = self.current_index
     # Media count by this user.
-    l_c = self.media_by_user[i]['likes']['count']
+    l_c = self.media_by_user[i]['node']['edge_liked_by']['count']
     if l_c <= self.media_max_like and l_c >= self.media_min_like:
         log_string = "Trying to like media: %s" %\
                       (self.media_by_user[i]['id'])

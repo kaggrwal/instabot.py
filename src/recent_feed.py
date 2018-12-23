@@ -12,16 +12,19 @@ def get_media_id_recent_feed(self):
             self.user_login, now_time.strftime("%d.%m.%Y %H:%M"))
         self.write_log(log_string)
         #url = 'https://www.instagram.com/?__a=1'
-        url = 'https://www.instagram.com/graphql/query/?query_hash=13ab8e6f3d19ee05e336ea3bd37ef12b&variables={}'
+        url = 'https://www.instagram.com/graphql/query/?query_hash=60b755363b5c230111347a7a4e242001&variables={}'
         try:
             r = self.s.get(url)
             all_data = json.loads(r.text)
 
-            self.media_on_feed = list(all_data['data']['user']['edge_web_feed_timeline']['edges'])
+            self.media_on_feed = list(all_data['data']['user']['feed_reels_tray']['edge_reels_tray_to_reel']['edges'])
             log_string = "Media in recent feed = %i" % (
                 len(self.media_on_feed))
             self.write_log(log_string)
-        except:
+        except Exception as err:
+            print("Some message")
+            print(err.__class__)
+            print(err)
             self.media_on_feed = []
             self.write_log('Except on get media!!')
             time.sleep(20)

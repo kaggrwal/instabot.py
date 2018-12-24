@@ -24,14 +24,15 @@ def get_media_id_user_feed(self):
 
         if self.login_status == 1 and self.is_fake_account != True and self.is_active_user != False and self.is_selebgram != True or self.is_by_tag != False:
             try:
-                r = self.s.get(url)
-                all_data = json.loads(r.text)
+                #r = self.s.get(url)
+                #all_data = json.loads(r.text)
 
-                if self.is_by_tag != True:
-                    self.media_by_user = list(all_data['graphql']['user']['edge_owner_to_timeline_media']['edges'])
-                else:
-                    self.media_by_user = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
-                log_string = "Get media by user success!"
+                #if self.is_by_tag != True:
+                  #  self.media_by_user = list(all_data['graphql']['user']['edge_owner_to_timeline_media']['edges'])
+                #else:
+                 #   self.media_by_user = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+                #log_string = "Get media by user success!"
+                log_string ="Not Doing random likes, code commednted (Y)"
                 self.write_log(log_string)
             except Exception as err:
                 print(err)

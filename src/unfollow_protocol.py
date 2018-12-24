@@ -31,13 +31,9 @@ def unfollow_protocol(self):
             user_feed_protocol(self)
             self.like_counter = 0
             self.media_by_user = []
-            if self.is_rejected is not True or self.is_fake_account is not False or self.is_follower is not True:
-                new_auto_mod_unfollow2(self)
-                try:
-                    del self.media_on_feed[chooser]
-                except Exception as err:
-                    print(err)
-                    print(err.__class__)
+            if self.is_rejected is not True:
+                if self.is_fake_account is not False or self.is_follower is not True:
+                    new_auto_mod_unfollow2(self)
                     self.media_on_feed = []
         else:
             follow_protocol(self)

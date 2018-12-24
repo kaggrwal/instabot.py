@@ -44,7 +44,7 @@ def get_user_info(self, username):
                 log_string = "Media : %i" % (media)
                 self.write_log(log_string)
 
-                if follows == 0 or follower / follows > 2:
+                if follows == 0 or follower / follows > 3 or follower > math.pow(10,4):
                     self.is_selebgram = True
                     self.is_fake_account = False
                     print('   >>>This is probably Selebgram account')

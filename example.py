@@ -14,15 +14,19 @@ bot = InstaBot(
     password="Infinity@314",
     like_per_day=500,
     comments_per_day=0,
-    tag_list=['wanderlust', '_soi', 'nikonindia','bnwphotography','incredibleindia','travelislife','photographers_of_india','travelgram','storiesofindia','_woi','visionofpictures','shots_of_india','newphotographers','instawriters','writersofindia','igwriters','poetry','shayri','instawriters','writersofinstagram','writersofindia','quoteoftheday'],
-    tag_blacklist=['porn', 'sex','hotgirl','instaporn','deals','sexy','likeforlike','followforfollow','hot','breakup','urdu','love','tiktok','musically'],
+    tag_list=['wanderlust', '_soi', 'nikonindia', 'bnwphotography', 'incredibleindia', 'travelislife',
+              'photographers_of_india', 'travelgram', 'storiesofindia', '_woi', 'visionofpictures', 'shots_of_india',
+              'newphotographers', 'instawriters', 'writersofindia', 'igwriters', 'poetry','yourquote', 'instawriters',
+              'writersofinstagram', 'writersofindia', 'quoteoftheday', 'astrophotgraphy','universe',],
+    tag_blacklist=['porn', 'sex', 'hotgirl', 'instaporn', 'deals', 'sexy', 'likeforlike', 'followforfollow', 'hot',
+                   'breakup', 'urdu', 'love', 'tiktok', 'musically'],
     user_blacklist={},
     max_like_for_one_tag=15,
-    follow_per_day=50,
-    follow_time=1 * 60 * 30,
+    follow_per_day=70,
+    follow_time=1 * 60 * 20,
     unfollow_per_day=40,
-    unfollow_break_min=60*30,
-    unfollow_break_max=60*60,
+    unfollow_break_min=60 * 20,
+    unfollow_break_max=60 * 60,
     log_mod=0,
     proxy='',
     # List of list of words, each of which will be used to generate comment
@@ -31,10 +35,10 @@ bot = InstaBot(
                   ["photo", "picture", "pic", "shot", "snapshot"],
                   ["is", "looks", "feels", "is really"],
                   ["great", "super", "good", "very good", "good", "wow",
-                   "WOW", "cool", "GREAT","magnificent", "magical",
+                   "WOW", "cool", "GREAT", "magnificent", "magical",
                    "very cool", "stylish", "beautiful", "so beautiful",
                    "so stylish", "so professional", "lovely",
-                   "so lovely", "very lovely", "glorious","so glorious",
+                   "so lovely", "very lovely", "glorious", "so glorious",
                    "very glorious", "adorable", "excellent", "amazing"],
                   [".", "..", "...", "!", "!!", "!!!"]],
     # Use unwanted_username_list to block usernames containing a string
@@ -48,15 +52,36 @@ bot = InstaBot(
         'beauty', 'express', 'kredit', 'collection', 'impor', 'preloved',
         'follow', 'follower', 'gain', '.id', '_id', 'bags'
     ],
-unfollow_whitelist=['9gag', 'shots_of_india','unheard_shayri','villainquote','nteetie','photowalkdelhi','ghietauelena','loeshoekstra','thegameoflaughs','people_who_rise','apextvofficial','stereoindia','sakshimalik','dlf_cyberhub','meenakshichaudhary006','anunaysood','thescientistfacts','h4pp1e','clone_collection','latest_one.in','dslr_hub_','technicalbaba_','mishti.and.meat','corporate.bytes','pruvichowdary','trendfilms','ixigo','artistsadda','oneplus','thelocaltrain','kailash.kumar11','famehazel','ankita_narayan_','sassy_thoughts','__funny__chats__','6amsuccess','adventure_nation_outdoor_tribe','kriti.kharbanda','akaushal2945','time4knowledge','divinebucketlist','iamtarunjit','markvelasquez101','thinkandcode','codechef','usabilla','ode_to_travel','shootguru','wandering_dreamcatcher','workoutsofficial','monkey__shanti','mrwhosetheboss','lalitshokeen1515','horrorphiles','fairwarningcareers','vision_of_india','asabhyak','sumeetvyas','instagram','selenagomez','natgeo','kajalaggarwaloffical','deepikapadukone','aliaabhatt','priyankachopra','sunnnyleone','ileana_official','jacquelinef143','naruto','nina','chan.singh7','evelyn_sharma','sarcasm_only','thegoodquote','barked','pu_chd','prachidesai','heenasihag','theawkwardyeti','chandigarhians__','factbolt','asapscience','tvfqtiyapa','allindiabakchod','narendramodi','navagg79','historytv18','the.realshit.gyan','namelsspc','akshaykumar','streets.of.india','500px','humansofchandigarh','the.ramukaka','virat.kohli','photgraphers_of_india','delhigram','stories.of.india','indianshutterbugs','indiatravelgram','jitendrak1','rajography','spacex','colours.of.india','nikonindiaofficial','yourstory_co','desi_diaries','simrankaur9492','troll_punjabi','sciencejoke.s','chemistryjokes','curiositydotcom','futurism','ethereal.colours','hiswriteups','longexpo_shotz','developerjobs4you','monikaspeaks','geekspin','wevolverapp','elonmusk','scrawledstories','thescribbledstories','ttt_official','scoopwhoop','thewashroomstories','amandacerny','ishivyas18','garbagebinofficial','bosplanet','natalie.dormer','emilia_clarke','roycebairphoto','singh_nikita','dslrofficial','theunrulytravler','streetphotographyindia','indian.photography','india.clicks','yourshot_india','indiapictures','igersofindia','photographers_hub_india','AANCHAL','shreya_j01','fotografiya0_0','abiteofsojourn','flyingpartha','nit_art01','ayushmannk','sosfashion75','shreyadeka','innervoicewf','sujatas13','prachi_1601','ritupriyaa','rj_ishita','hire_tale','zostel','_ravv_','mileywebdeveloper','tapsee','coders.blog','getpoliticl','linkedinlife','google','the_travelling_hermit','royalenfield','watch_world_0005','anand_madhu','akshatkj','originalindia_'])
+    unfollow_whitelist=['9gag', 'unheard_shayri', 'villainquote', 'photowalkdelhi',
+                        'people_who_rise', 'apextvofficial',
+                        'stereoindia', 'sakshimalik',
+                        'thescientistfacts','latest_one.in',
+                        'technicalbaba_','corporate.bytes','trendfilms', 'ixigo',
+                        'artistsadda', 'oneplus','famehazel','sassy_thoughts','6amsuccess', 'adventure_nation_outdoor_tribe',
+                        'kriti.kharbanda', 'akaushal2945', 'time4knowledge', 'divinebucketlist','codechef', 'usabilla', 'ode_to_travel', 'shootguru',
+                        'workoutsofficial','horrorphiles', 'fairwarningcareers', 'vision_of_india', 'asabhyak',
+                        'nina', 'chan.singh7', 'sarcasm_only', 'thegoodquote', 'barked', 'pu_chd',
+                        'theawkwardyeti', 'chandigarhians__', 'factbolt', 'asapscience',
+                        'navagg79',
+                        'namelsspc','humansofchandigarh', 'the.ramukaka',
+                        'photgraphers_of_india', 'delhigram', 'stories.of.india', 'indianshutterbugs',
+                        'colours.of.india',
+                        'nikonindiaofficial', 'yourstory_co', 'desi_diaries', 'simrankaur9492', 'troll_punjabi',
+                        'sciencejoke.s', 'chemistryjokes', 'curiositydotcom', 'futurism', 'ethereal.colours',
+                        'hiswriteups', 'longexpo_shotz', 'developerjobs4you', 'monikaspeaks', 'geekspin', 'wevolverapp',
+                        'elonmusk', 'scrawledstories', 'thescribbledstories', 'ttt_official', 'scoopwhoop',
+                        'thewashroomstories', 'amandacerny', 'ishivyas18', 'garbagebinofficial', 'bosplanet',
+                        'theunrulytravler', 'streetphotographyindia', 'indian.photography', 'india.clicks',
+                        'sosfashion75', 'innervoicewf', 'hire_tale', 'zostel', 'getpoliticl', 'linkedinlife', 'google', 'the_travelling_hermit', 'royalenfield',
+                        'watch_world_0005', 'originalindia_'])
 while True:
 
-    #print("# MODE 0 = ORIGINAL MODE BY LEVPASHA")
-    #print("## MODE 1 = MODIFIED MODE BY KEMONG")
-    #print("### MODE 2 = ORIGINAL MODE + UNFOLLOW WHO DON'T FOLLOW BACK")
-    #print("#### MODE 3 = MODIFIED MODE : UNFOLLOW USERS WHO DON'T FOLLOW YOU BASED ON RECENT FEED")
-    #print("##### MODE 4 = MODIFIED MODE : FOLLOW USERS BASED ON RECENT FEED ONLY")
-    #print("###### MODE 5 = MODIFIED MODE : JUST UNFOLLOW EVERYBODY, EITHER YOUR FOLLOWER OR NOT")
+    # print("# MODE 0 = ORIGINAL MODE BY LEVPASHA")
+    # print("## MODE 1 = MODIFIED MODE BY KEMONG")
+    # print("### MODE 2 = ORIGINAL MODE + UNFOLLOW WHO DON'T FOLLOW BACK")
+    # print("#### MODE 3 = MODIFIED MODE : UNFOLLOW USERS WHO DON'T FOLLOW YOU BASED ON RECENT FEED")
+    # print("##### MODE 4 = MODIFIED MODE : FOLLOW USERS BASED ON RECENT FEED ONLY")
+    # print("###### MODE 5 = MODIFIED MODE : JUST UNFOLLOW EVERYBODY, EITHER YOUR FOLLOWER OR NOT")
 
     ################################
     ##  WARNING   ###
@@ -67,9 +92,9 @@ while True:
 
     mode = 2
 
-    #print("You choose mode : %i" %(mode))
-    #print("CTRL + C to cancel this operation or wait 30 seconds to start")
-    #time.sleep(30)
+    # print("You choose mode : %i" %(mode))
+    # print("CTRL + C to cancel this operation or wait 30 seconds to start")
+    # time.sleep(30)
 
     if mode == 0:
         bot.new_auto_mod()
@@ -108,4 +133,3 @@ while True:
 
     else:
         print("Wrong mode!")
-

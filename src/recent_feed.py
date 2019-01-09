@@ -17,6 +17,9 @@ def get_media_id_recent_feed(self):
             r = self.s.get(url)
             all_data = json.loads(r.text)
 
+            if 'data' not in all_data:
+                print("rate limit reached")
+                return 0
             self.media_on_feed = list(all_data['data']['user']['feed_reels_tray']['edge_reels_tray_to_reel']['edges'])
             log_string = "Media in recent feed = %i" % (
                 len(self.media_on_feed))
